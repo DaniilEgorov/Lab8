@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.canvas.Canvas?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Task2.Controller">
+  <children>
+    <TabPane prefHeight="372.0" prefWidth="572.0" tabClosingPolicy="UNAVAILABLE" visible="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+      <tabs>
+        <Tab text="Линия" >
+          <content>
+            <AnchorPane fx:id="line" id="Content" minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="572.0">
+              <children>
+                <Label layoutX="450.0" layoutY="16.0" text="Начало" />
+                <Label layoutX="461.0" layoutY="35.0" text="x" />
+                <Label layoutX="461.0" layoutY="64.0" text="y" />
+                <TextField fx:id="x1" layoutX="479.0" layoutY="32.0" prefWidth="79.0" />
+                <TextField fx:id="y1" layoutX="479.0" layoutY="61.0" prefWidth="79.0" />
+                <Label layoutX="450.0" layoutY="97.0" text="Конец" />
+                <Label layoutX="461.0" layoutY="116.0" text="x" />
+                <Label layoutX="461.0" layoutY="145.0" text="y" />
+                <TextField fx:id="x2" layoutX="479.0" layoutY="113.0" prefWidth="79.0" />
+                <TextField fx:id="y2" layoutX="479.0" layoutY="142.0" prefWidth="79.0" />
+                <Button onAction="#drawLine" layoutX="450.0" layoutY="306.0" mnemonicParsing="false" prefWidth="108.0" text="Рисовать" />
+                <Canvas/>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Прямоугольник">
+          <content>
+            <AnchorPane fx:id="rect" id="Content" minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="381.0">
+              <children>
+                <Button onAction="#drawRect" layoutX="450.0" layoutY="306.0" mnemonicParsing="false" prefWidth="108.0" text="Рисовать" />
+                <Label layoutX="450.0" layoutY="16.0" text="Левый верхний угол" />
+                <Label layoutX="461.0" layoutY="35.0" text="x" />
+                <Label layoutX="461.0" layoutY="64.0" text="y" />
+                <TextField fx:id="x3" layoutX="479.0" layoutY="32.0" prefWidth="79.0" />
+                <TextField fx:id="y3" layoutX="479.0" layoutY="61.0" prefWidth="79.0" />
+                <Label layoutX="450.0" layoutY="97.0" text="Длина и ширина" />
+                <Label layoutX="461.0" layoutY="116.0" text="w" />
+                <Label layoutX="461.0" layoutY="145.0" text="h" />
+                <TextField fx:id="w" layoutX="479.0" layoutY="113.0" prefWidth="79.0" />
+                <TextField fx:id="h" layoutX="479.0" layoutY="142.0" prefWidth="79.0" />
+                <CheckBox fx:id="checkRect" allowIndeterminate="false" indeterminate="false" layoutX="450.0" layoutY="171.0" mnemonicParsing="false" selected="false" text="Закрасить" />
+                <Canvas/>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Эллипс">
+          <content>
+            <AnchorPane fx:id="ellipse" id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <children>
+                <Label layoutX="450.0" layoutY="16.0" text="Центр" />
+                <Label layoutX="461.0" layoutY="35.0" text="x" />
+                <Label layoutX="461.0" layoutY="64.0" text="y" />
+                <TextField fx:id="x4" layoutX="479.0" layoutY="32.0" prefWidth="79.0" />
+                <TextField fx:id="y4" layoutX="479.0" layoutY="61.0" prefWidth="79.0" />
+                <Label layoutX="450.0" layoutY="97.0" text="Радиусы" />
+                <Label layoutX="461.0" layoutY="116.0" text="a" />
+                <Label layoutX="461.0" layoutY="145.0" text="b" />
+                <TextField fx:id="a" layoutX="479.0" layoutY="113.0" prefWidth="79.0" />
+                <TextField fx:id="b" layoutX="479.0" layoutY="142.0" prefWidth="79.0" />
+                <CheckBox fx:id="checkEllipse" allowIndeterminate="false" indeterminate="false" layoutX="450.0" layoutY="171.0" mnemonicParsing="false" selected="false" text="Закрасить" />
+                <Button onAction="#drawEllipse" layoutX="450.0" layoutY="306.0" mnemonicParsing="false" prefWidth="108.0" text="Рисовать" />
+                <Canvas/>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+        <Tab text="Треугольник">
+          <content>
+            <AnchorPane fx:id="triangle" id="Content" minHeight="0.0" minWidth="0.0" prefHeight="341.0" prefWidth="572.0">
+              <children>
+                <Label layoutX="450.0" layoutY="16.0" text="Первая точка" />
+                <Label layoutX="461.0" layoutY="35.0" text="x" />
+                <Label layoutX="461.0" layoutY="64.0" text="y" />
+                <TextField fx:id="x5" layoutX="479.0" layoutY="32.0" prefWidth="79.0" />
+                <TextField fx:id="y5" layoutX="479.0" layoutY="61.0" prefWidth="79.0" />
+                <Label layoutX="450.0" layoutY="97.0" text="Вторая точка" />
+                <Label layoutX="461.0" layoutY="116.0" text="x" />
+                <Label layoutX="461.0" layoutY="145.0" text="y" />
+                <TextField fx:id="x6" layoutX="479.0" layoutY="113.0" prefWidth="79.0" />
+                <TextField fx:id="y6" layoutX="479.0" layoutY="142.0" prefWidth="79.0" />
+                <Label layoutX="450.0" layoutY="178.0" text="Третья точка" />
+                <Label layoutX="461.0" layoutY="197.0" text="x" />
+                <Label layoutX="461.0" layoutY="226.0" text="y" />
+                <TextField fx:id="x7" layoutX="479.0" layoutY="194.0" prefWidth="79.0" />
+                <TextField fx:id="y7" layoutX="479.0" layoutY="223.0" prefWidth="79.0" />
+                <CheckBox fx:id="checkTriangle" allowIndeterminate="false" indeterminate="false" layoutX="450.0" layoutY="252.0" mnemonicParsing="false" selected="false" text="Закрасить" />
+                <Button onAction="#drawTriangle" layoutX="450.0" layoutY="306.0" mnemonicParsing="false" prefWidth="108.0" text="Рисовать" />
+                <Canvas/>
+              </children>
+            </AnchorPane>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </children>
+</AnchorPane>
